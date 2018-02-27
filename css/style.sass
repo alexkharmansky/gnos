@@ -1,0 +1,390 @@
+body
+  font-family: 'Roboto Condensed', sans-serif
+
+header
+  border-top: 5px #39b032 solid
+  padding: 2rem
+  background-color: #f0f0f0
+  @media (max-width: 768px)
+    padding-bottom: 0px
+
+// класс хедер
+.header
+  &-img // лого
+    width: 180px
+    margin-top: -0.8rem
+    float: right
+    @media (max-width: 992px)
+      float: none
+    @media (max-width: 425px)
+      width: 125px
+    @media (max-width: 375px)
+      margin-top: -1.5rem
+  &-call // телефон
+    color: #000
+    margin-top: -1.3rem
+    font-size: 1.5rem
+    font-weight: 700
+    letter-spacing: 1.3px
+    @media (max-width: 992px)
+      letter-spacing: 0
+    @media (max-width: 425px)
+      font-size: 1rem
+    @media (max-width: 375px)
+      font-size: 0.9rem
+    &_desc // описание
+      text-transform: uppercase
+      color: #949494
+      font-size: 15px
+      margin-top: -1rem
+      @media (max-width: 425px)
+        font-size: 0.7rem
+      @media (max-width: 375px)
+        font-size: 0.6rem
+    &_btn // кнопка
+      background: url(../img/button-call.png) no-repeat right center
+      cursor: pointer
+      transition: all 0.3s
+      margin-top: -1.8rem
+      height: 80px
+      width: 200px
+      &:hover
+        background: url(../img/button-call_hover.png) no-repeat right center
+      @media (max-width: 768px)
+        display: none
+
+// меню
+.menu
+  &-list // список
+    display: flex
+    justify-content: space-between
+    padding: 0
+    margin-top: 0.5rem
+    &__box // блок
+      background: linear-gradient(to top, #008400, #00b600)
+      padding-top: 3px
+      padding-bottom: 0.3px
+      padding-left: 5px
+      padding-right: 5px
+      margin-top: -2rem
+      border-radius: 8px
+      position: absolute
+      width: 92%
+      z-index: 100
+      left: 4%
+      @media (max-width: 1198px)
+        padding-left: 2rem
+        padding-right: 2rem
+        width: 100%
+        left: 0
+      @media (max-width: 1024px)
+        padding-left: 10px
+        padding-right: 10px
+      @media (max-width: 768px)
+        display: none
+    &_items // айтемы
+      display: inline-block
+      margin-right: 1.5rem
+      margin-left: 1.5rem
+      @media (max-width: 1198px)
+        margin: 0
+      @media (max-width: 1024px)
+        margin: 0
+      &__links // ссылки
+        display: block
+        margin-top: 5px
+        width: 100%
+        text-decoration: none
+        color: #fff
+        height: 100%
+        text-shadow: 1px 1px 2px #000
+        text-transform: uppercase
+        transition: all 0.3s
+        font-weight: 700
+        letter-spacing: 1.3px
+        &:hover
+          text-decoration: none
+          color: #fff
+          text-shadow: 1px 1px 2px #fff
+
+// слайдер
+.slider
+  margin-top: -1px
+  display: block
+  z-index: 1
+  &-arrow // стрелки
+    &_left
+      transition: all 0.3s
+      &:hover
+        background: url(../img/arrow-left_hover.png) no-repeat center center
+    &_right
+      transition: all 0.3s
+      &:hover
+        background: url(../img/arrow-right_hover.png) no-repeat center center
+
+// бутстраповские классы
+// стрелки
+.carousel-control-next
+  justify-content: flex-end
+  margin-right: 1rem
+  opacity: 1
+  width: 0
+
+.carousel-control-prev
+  justify-content: flex-start
+  margin-left: 1rem
+  opacity: 1
+  width: 0
+
+// изображения
+.d-block
+  border-bottom: 3px #39b032 solid
+
+// виды деятельности
+.activities
+  margin-top: 2rem
+  @media (max-width: 320px)
+    display: none
+  &__box
+    border: 1px solid #eeeeee
+    text-align: center
+    padding: 25px
+    @media (max-width: 992px)
+      width: 200px
+      height: 200px
+      padding: 0
+    @media (max-width: 768px)
+      width: 150px
+      height: 180px
+    @media (max-width: 425px)
+      border: none
+      width: 110px
+    @media (max-width: 375px)
+      width: 100px
+      height: 150px
+  &-title
+    text-align: center
+    text-transform: uppercase
+    margin-bottom: 1rem
+    @media (max-width: 992px)
+      font-size: 1rem
+    @media (max-width: 375px)
+      font-size: 0.9rem
+  &-img
+    filter: grayscale(100%)
+    transition: all 0.3s
+    &:hover
+      filter: grayscale(0%)
+    @media (max-width: 992px)
+      width: 150px
+    @media (max-width: 768px)
+      width: 125px
+    @media (max-width: 425px)
+      width: 110px
+    @media (max-width: 375px)
+      width: 100px
+
+
+// цель
+.purpose
+  margin-top: 3rem
+  @media (max-width: 425px)
+    margin-top: 0
+  &-title
+    text-transform: uppercase
+    font-weight: 700
+    @media (max-width: 320px)
+      font-size: 1.1rem
+      margin-top: 1rem
+  &-text
+    &_green
+      color: #39b032
+  &-block
+    background: url(../img/purpose-block.png) no-repeat center center
+    background-size: cover
+  &-list
+    list-style-type: none
+    padding-left: 0
+  &-items
+    margin-left: 1rem
+    margin-top: 0.9rem
+    &:before
+      content: "\f164"
+      font-family: 'FontAwesome'
+      color: #39b032
+    @media (max-width: 320px)
+      margin-top: 6px
+      font-size: 0.9rem
+
+// скиллы
+.skills
+  margin-top: 2rem
+  &-box
+    &_2
+      background: url(../img/skills-shadow_1.png) no-repeat left
+    &_3
+      background: url(../img/skills-shadow_2.png) no-repeat left
+  &-title
+    color: #39b032
+    font-size: 4rem
+    margin-top: 2rem
+  &-desc
+    text-transform: uppercase
+    margin-bottom: 2rem
+    &_2
+      text-transform: uppercase
+      @media (max-width: 320px)
+        font-size: 0.9rem
+  &-text
+    text-transform: uppercase
+    &_2
+      font-style: italic
+      @media (max-width: 320px)
+        font-size: 0.9rem
+  &-btn
+    width: 100%
+    height: 125px
+    background: url(../img/skills-btn.png) no-repeat center center
+    transition: all 0.3s
+    cursor: pointer
+    &:hover
+      background: url(../img/skills-btn_hover.png) no-repeat center center
+    &__box
+      border-left: 1px solid #eeeeee
+
+// новости
+.news
+  margin-top: 2rem
+  &-title
+    &_2
+      @media (max-width: 992px)
+        display: none
+      @media (max-width: 768px)
+        display: none
+  &-desc
+    margin-top: 1rem
+    text-transform: uppercase
+    border-bottom: 2px solid #39b032
+    padding-bottom: 0.5rem
+    @media (max-width: 992px)
+      font-size: 0.9rem
+  &-text
+    font-size: 0.9rem
+    border-bottom: 1px solid #eeeeee
+    padding-bottom: 10px
+  &-reports
+    margin-top: -1rem
+    width: 270px
+    height: 300px
+    background: url(../img/news-reports.png) no-repeat center center
+    position: absolute
+    @media (max-width: 992px)
+      background: none
+      width: 250px
+      height: 0
+      position: static
+    &_text
+      margin-top: 2.5rem
+      font-size: 0.9rem
+      padding: 20px
+      font-style: italic
+    &_name
+      margin-left: 3.5rem
+      margin-top: 1.5rem
+      padding-right: 60px
+      @media (max-width: 992px)
+        margin-left: 1rem
+    &_next
+      display: inline-block
+      float: right
+      margin-top: -4rem
+      background-color: #eeeeee
+      padding-left: 20px
+      padding-right: 20px
+      padding-top: 10px
+      padding-bottom: 10px
+      color: #000
+      @media (max-width: 992px)
+        margin-right: 1rem
+      &:hover
+        color: #39b032
+  &-date
+      display: inline-block
+  &-btn
+      display: inline-block
+      float: right
+      color: #39b032
+      &:hover
+        color: #39b032
+  &-3
+    @media (max-width: 1024px)
+      display: none
+
+// футер
+footer
+  margin-top: 2rem
+.footer
+  &-line
+    border-top: 1px solid #eeeeee
+    &_shadow
+      float: left
+  &-list
+    margin-top: -1.5rem
+    padding: 0
+    &_items
+      text-transform: uppercase
+      display: inline-block
+      margin-left: 1rem
+      margin-right: 1rem
+      @media (max-width: 992px)
+        margin-left: 0.5rem
+        margin-right: 0.5rem
+    &_links
+      color: #000
+      &:hover
+        color: #39b032
+        text-decoration: none
+  &-text
+    font-size: 0.9rem
+    @media (max-width: 375px)
+      font-size: 0.8rem
+  &-btn
+    background: url(../img/footer-btn.png) no-repeat center center
+    transition: all 0.3s
+    margin-top: 2.3rem
+    height: 2.7rem
+    @media (max-width: 992px)
+      margin-top: 3.6rem
+    @media (max-width: 768px)
+      margin: 0
+      height: 2.8rem
+      width: 50%
+      border-bottom: 1px solid #eeeeee
+    &:hover
+      background: url(../img/footer-btn_hover.png) no-repeat center center
+    &_link
+      display: block
+      width: 100%
+      height: 100%
+
+// тайгервеб
+.tigerweb
+  &-text
+    font-size: 0.8rem
+    float: right
+    text-align: right
+    margin-top: 0.8rem
+    line-height: 14px
+    @media (max-width: 768px)
+      right: 0
+      position: absolute
+  &-logo
+    filter: grayscale(100%)
+    transition: all 0.3s
+    margin-top: 1rem
+    @media (max-width: 768px)
+      position: absolute
+    &:hover
+      filter: grayscale(0%)
+    @media (max-width: 425px)
+      width: 100px
