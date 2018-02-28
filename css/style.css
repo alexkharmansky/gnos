@@ -23,6 +23,9 @@ header {
   @media (max-width: 375px) {
     .header-img {
       margin-top: -1.5rem; } }
+  @media (max-width: 320px) {
+    .header-img {
+      width: 100px; } }
 .header-call {
   color: #000;
   margin-top: -1.3rem;
@@ -38,6 +41,9 @@ header {
   @media (max-width: 375px) {
     .header-call {
       font-size: 0.9rem; } }
+  @media (max-width: 320px) {
+    .header-call {
+      font-size: 0.7rem; } }
   .header-call_desc {
     text-transform: uppercase;
     color: #949494;
@@ -49,6 +55,10 @@ header {
     @media (max-width: 375px) {
       .header-call_desc {
         font-size: 0.6rem; } }
+    @media (max-width: 320px) {
+      .header-call_desc {
+        line-height: 0.7rem;
+        margin-bottom: 20px; } }
   .header-call_btn {
     background: url(../img/button-call.png) no-repeat right center;
     cursor: pointer;
@@ -238,12 +248,14 @@ header {
     list-style-type: none;
     padding-left: 0; }
   .purpose-items {
-    margin-left: 1rem;
+    margin-left: 1.3rem;
     margin-top: 0.9rem; }
     .purpose-items:before {
       content: "";
       font-family: "FontAwesome";
-      color: #39b032; }
+      color: #39b032;
+      position: absolute;
+      left: 15px; }
     @media (max-width: 320px) {
       .purpose-items {
         margin-top: 6px;
@@ -251,10 +263,21 @@ header {
 
 .skills {
   margin-top: 2rem; }
+  @media (max-width: 992px) {
+    .skills-box_1 {
+      border-bottom: 1px solid #eeeeee; } }
   .skills-box_2 {
     background: url(../img/skills-shadow_1.png) no-repeat left; }
+    @media (max-width: 992px) {
+      .skills-box_2 {
+        background: none;
+        border-left: 1px solid #eeeeee;
+        border-bottom: 1px solid #eeeeee; } }
   .skills-box_3 {
     background: url(../img/skills-shadow_2.png) no-repeat left; }
+    @media (max-width: 992px) {
+      .skills-box_3 {
+        background: none; } }
   .skills-title {
     color: #39b032;
     font-size: 4rem;
@@ -264,6 +287,9 @@ header {
     margin-bottom: 2rem; }
     .skills-desc_2 {
       text-transform: uppercase; }
+      @media (max-width: 992px) {
+        .skills-desc_2 {
+          margin-top: 1rem; } }
       @media (max-width: 320px) {
         .skills-desc_2 {
           font-size: 0.9rem; } }
@@ -315,7 +341,7 @@ header {
     @media (max-width: 992px) {
       .news-reports {
         background: none;
-        width: 250px;
+        width: 100%;
         height: 0;
         position: static; } }
     .news-reports_text {
@@ -329,7 +355,8 @@ header {
       padding-right: 60px; }
       @media (max-width: 992px) {
         .news-reports_name {
-          margin-left: 1rem; } }
+          margin-left: 1rem;
+          margin-top: -1rem; } }
     .news-reports_next {
       display: inline-block;
       float: right;
@@ -342,7 +369,8 @@ header {
       color: #000; }
       @media (max-width: 992px) {
         .news-reports_next {
-          margin-right: 1rem; } }
+          margin-right: 1rem;
+          margin-top: -3.2rem; } }
       .news-reports_next:hover {
         color: #39b032; }
   .news-date {
